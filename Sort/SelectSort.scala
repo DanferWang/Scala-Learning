@@ -8,7 +8,7 @@ object SelectSort {
     for (i <- 0 until arr.length) {
       printf("%d\t", arr(i))
     }
-    //冒泡排序
+    //选择排序
     select(arr)
     //排序后显示
     println("\n排序后数组：")
@@ -28,7 +28,7 @@ object SelectSort {
           maxIndex = j
         }
       }
-      if (maxIndex != i) {
+      if (maxIndex != i) {//加入判断是否需要移位，减少不必要交换，提高交换效率
         temp = arr(i)
         arr(i) = arr(maxIndex)
         arr(maxIndex) = temp
